@@ -10,7 +10,7 @@ export const environment = {
     authDomain: "launchbag-app.firebaseapp.com",
     databaseURL: "https://launchbag-app.firebaseio.com",
     projectId: "launchbag-app",
-    storageBucket: "",
+    storageBucket: "launchbag-app.appspot.com",
     messagingSenderId: "804238781660"
   }
 };

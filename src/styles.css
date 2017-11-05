@@ -2,9 +2,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body {
-  padding-top: 5rem;
-}
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+  padding-top: 10rem;
+  background-image: url("/assets/images/3x/background@3x.png")
 }

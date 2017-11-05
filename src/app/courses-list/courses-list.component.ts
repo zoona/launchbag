@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'courses-list',
@@ -10,13 +12,13 @@ export class CoursesListComponent implements OnInit {
   coursesObservable: Observable<any[]>;
 
   constructor(private db: AngularFireDatabase) { }
-  constructor() { }
 
   ngOnInit() {
     this.coursesObservable = this.getCourses('/courses');
   }
-  
+
   getCourses(listPath): Observable<any[]> {
     return this.db.list(listPath).valueChanges();
   }
 }
+ 
