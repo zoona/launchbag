@@ -10,21 +10,22 @@ import { environment } from './../environments/environment';
 import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 
+import { HttpModule } from '@angular/http';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { CoursesListComponent } from './courses-list/courses-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppNavbarComponent,
-    CoursesListComponent
+    AppNavbarComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
