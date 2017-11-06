@@ -15,7 +15,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
   title = 'launchbag';
   message1: any;
   message2: any;
-  socket = io('http://localhost:3000');
+  socket = io('http://169.56.88.43:3000');
   finished1: boolean;
   finished2: boolean;
   constructor(private http: Http){}
