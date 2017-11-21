@@ -17,12 +17,12 @@ export class AppComponent implements OnInit, AfterViewChecked {
   message1: any;
   message2: any;
   message3: any;
-  socket = io('http://localhost:3000');
+  socket = io('http://tcl1:3000');
   finished1: boolean;
   finished2: boolean;
   finished3: boolean;
   constructor(private http: Http){}
-  apiUrl = "http://localhost:3000/api/";
+  apiUrl = "http://tcl1:3000/api/";
   rancherUrl = 'http://tcl1:8080';
   jupyterUrl = 'http://tcl2:8888';
   kibanaUrl = "http://tcl2:5601/app/kibana#/dashboard/AV-R1w4qx1YW3m0zZ5qW?_g=(refreshInterval:('$$hashKey':'object:3758',display:'5%20seconds',pause:!f,section:1,value:5000),time:(from:now-15m,mode:quick,to:now))&_a=(description:'',filters:!(),options:(darkTheme:!f),panels:!((col:1,id:AV-R1FODx1YW3m0zZ5mT,panelIndex:1,row:1,size_x:6,size_y:3,type:visualization),(col:7,id:AV-R01pKx1YW3m0zZ5lE,panelIndex:2,row:1,size_x:6,size_y:3,type:visualization),(col:1,columns:!(customer_id,track_id,ismobile,listening_zip_code),id:AV-R1o4Nx1YW3m0zZ5pc,panelIndex:3,row:4,size_x:12,size_y:3,sort:!('@timestamp',desc),type:search)),query:(match_all:()),timeRestore:!f,title:dash-all,uiState:(),viewMode:view)";
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit, AfterViewChecked {
     this.finished1 = false;
     this.finished2 = false;
     this.finished3 = false;
-    
+
     this.socket.on('ds', function (data) {
       this.message1 = data;
       if(data.indexOf("RECAP") >= 0)
