@@ -15,7 +15,8 @@ let response = {
     message: null
 };
 
-this.workingDir = '/Users/zoona/Work/Job/launchbag/LaunchBag';
+//this.workingDir = '/Users/zoona/Work/Job/launchbag/LaunchBag';
+this.workingDir = '/home/rts/apps/launchbag';
 
 router.get('/ds', (req, res) => {
     
