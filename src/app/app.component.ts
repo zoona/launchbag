@@ -35,19 +35,19 @@ export class AppComponent implements OnInit, AfterViewChecked {
     this.finished1 = false;
     this.finished2 = false;
     this.finished3 = false;
-
+    
     this.socket.on('ds', function (data) {
       this.message1 = data;
       if(data.indexOf("RECAP") >= 0)
       this.finished1 = true;
     }.bind(this));
-
+    
     this.socket.on('elk', function (data) {
       this.message2 = data;
       if(data.indexOf("RECAP") >= 0)
       this.finished2 = true;
     }.bind(this));
-
+    
     this.socket.on('bda', function (data) {
       this.message3 = data;
       if(data.indexOf("RECAP") >= 0)
@@ -79,18 +79,21 @@ export class AppComponent implements OnInit, AfterViewChecked {
   }
   
   runDS() {
+    console.log('call api "ds"');
     this.http.get(this.apiUrl + "ds")
     .map(res => res.json())
     .subscribe(d => console.log(d));
   }
   
   runELK() {
+    console.log('call api "elk"');
     this.http.get(this.apiUrl + "elk")
     .map(res => res.json())
     .subscribe(d => console.log(d));
   }
   
   runBDA() {
+    console.log('call api "bda"');
     this.http.get(this.apiUrl + "bda")
     .map(res => res.json())
     .subscribe(d => console.log(d));
