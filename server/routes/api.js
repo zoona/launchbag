@@ -29,6 +29,7 @@ router.get('/ds', (req, res) => {
     var chunk = '';
     child.stdout.on("data", function(data) {
         console.log(data.toString());
+        data = data.toString().replace("FAILED -", "");
         chunk += data;
         socket.emit('ds', chunk);
     });
@@ -51,6 +52,7 @@ router.get('/elk', (req, res) => {
     var chunk = '';
     child.stdout.on("data", function(data) {
         console.log(data.toString());
+        data = data.toString().replace("FAILED -", "");
         chunk += data;
         socket.emit('elk', chunk);
     });
@@ -72,6 +74,7 @@ router.get('/bda', (req, res) => {
     var chunk = '';
     child.stdout.on("data", function(data) {
         console.log(data.toString());
+        data = data.toString().replace("FAILED -", "");
         chunk += data;
         socket.emit('bda', chunk);
     });
