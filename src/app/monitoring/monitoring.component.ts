@@ -9,6 +9,8 @@ export class MonitoringComponent implements OnInit {
 
   constructor() { }
 
+  rancherUrl = 'http://tcl1:8080';
+  
   ngOnInit() {
   }
 
