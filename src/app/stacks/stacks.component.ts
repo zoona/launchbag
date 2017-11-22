@@ -23,7 +23,7 @@ export class StacksComponent implements OnInit, AfterViewChecked {
   finished3: boolean;
   constructor(private http: Http){}
   apiUrl = "http://tcl1:3000/api/";
-  rancherUrl = 'http://tcl1:8080';
+  rancherUrl = 'http://tcl1:3000';
   jupyterUrl = 'http://tcl2:8888';
   kibanaUrl = "http://tcl2:5601/app/kibana#/dashboard/AV-R1w4qx1YW3m0zZ5qW?_g=(refreshInterval:('$$hashKey':'object:3758',display:'5%20seconds',pause:!f,section:1,value:5000),time:(from:now-15m,mode:quick,to:now))&_a=(description:'',filters:!(),options:(darkTheme:!f),panels:!((col:1,id:AV-R1FODx1YW3m0zZ5mT,panelIndex:1,row:1,size_x:6,size_y:3,type:visualization),(col:7,id:AV-R01pKx1YW3m0zZ5lE,panelIndex:2,row:1,size_x:6,size_y:3,type:visualization),(col:1,columns:!(customer_id,track_id,ismobile,listening_zip_code),id:AV-R1o4Nx1YW3m0zZ5pc,panelIndex:3,row:4,size_x:12,size_y:3,sort:!('@timestamp',desc),type:search)),query:(match_all:()),timeRestore:!f,title:dash-all,uiState:(),viewMode:view)";
   zeppelinUrl = "http://tcl2:8085";
