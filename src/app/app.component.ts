@@ -44,7 +44,8 @@ export class AppComponent implements OnInit, AfterViewChecked {
     
     this.socket.on('elk', function (data) {
       this.message2 = data;
-      if(data.indexOf("RECAP") >= 0)
+      //if(data.indexOf("RECAP") >= 0)
+      if(data.indexOf("Run Data generator again") >= 0)
       this.finished2 = true;
     }.bind(this));
     
@@ -97,5 +98,17 @@ export class AppComponent implements OnInit, AfterViewChecked {
     this.http.get(this.apiUrl + "bda")
     .map(res => res.json())
     .subscribe(d => console.log(d));
+  }
+
+  redirectToJupyter() {
+    window.open(this.jupyterUrl);
+  }
+
+  redirectToKibana() {
+    window.open(this.kibanaUrl);
+  }
+
+  redirectToZeppelin() {
+    window.open(this.zeppelinUrl);
   }
 }
