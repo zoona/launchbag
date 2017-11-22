@@ -6,7 +6,7 @@ import { MonitoringComponent } from './monitoring/monitoring.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: '/stacks', pathMatch: 'full' },
   { path: 'stacks', component: StacksComponent },
   { path: 'monitoring', component: MonitoringComponent }
 ];
