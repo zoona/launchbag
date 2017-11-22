@@ -14,12 +14,14 @@
             <li>분석가는 해당 URL에 접근하여 분석업무 수행!</li>
           </ul>
         </div>
-        <div class="col-sm-10 mt-3">
-          <p [hidden]="!message1 || finished1">processing</p>
+        <div class="col-sm-12 mt-3">
+          <p class="processing" [hidden]="!message1 || finished1">processing...</p>
           <div [hidden]="!finished1">
-            <button type="button" class="btn btn-secondary" >Jupyter</button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="redirectToJupyter()">Jupyter</button>
           </div>
-          <textarea #scrollMe1 [hidden]="!message1" class="form-control" rows="5" style="min-width: 100%;font-size:14px;">{{ message1 }}</textarea>
+          <div class=" mt-3">
+            <textarea #scrollMe1 [hidden]="!message1" class="form-control logConsole" rows="6">{{ message1 }}</textarea>
+          </div>
         </div>
       </div>
       
@@ -35,10 +37,14 @@
           </ul>
         </div>
         
-        <div class="col-sm-10 mt-3">
-          <p [hidden]="!message2 || finished2">processing</p>
-          <div [hidden]="!finished2"><a href="{{kibanaUrl}}" target="_blank">[Kibana link]</a></div>
-          <textarea #scrollMe2 [hidden]="!message2" class="form-control" rows="5" style="min-width: 100%;font-size:14px;">{{ message2 }}</textarea>          
+        <div class="col-sm-12 mt-3">
+          <p class="processing" [hidden]="!message2 || finished2">processing...</p>
+          <div [hidden]="!finished2">
+            <button type="button" class="btn btn-primary btn-sm" (click)="redirectToKibana()">Kibana</button>
+          </div>
+          <div class=" mt-3">
+            <textarea #scrollMe2 [hidden]="!message2" class="form-control logConsole" rows="6">{{ message2 }}</textarea>          
+          </div>
         </div>
       </div>
       
@@ -54,11 +60,14 @@
           </ul>
         </div>
         <br/>
-        <div class="col-sm-10 mt-3">
-          <p [hidden]="!message3 || finished3">processing</p>
-          <div [hidden]="!finished3"><a href="{{zeppelinUrl}}" target="_blank">[Zeppelin link]</a></div>
-          <textarea #scrollMe3 [hidden]="!message3" class="form-control" rows="5" style="min-width: 100%;font-size:14px;">{{ message3 }}</textarea>
-          
+        <div class="col-sm-12 mt-3">
+          <p class="processing" [hidden]="!message3 || finished3">processing...</p>
+          <div [hidden]="!finished3">
+            <button type="button" class="btn btn-primary btn-sm" (click)="redirectToZeppelin()">Zeppelin</button>
+          </div>
+          <div class=" mt-3">
+            <textarea #scrollMe3 [hidden]="!message3" class="form-control logConsole" rows="6">{{ message3 }}</textarea>
+          </div>
         </div>
       </div>
     </div>

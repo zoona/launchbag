@@ -19,6 +19,15 @@
   height: 30px;
 }
 
+.processing {
+  font-style: italic
+}
+
+.logConsole {
+  font-style: italic;
+  font-size: 9px;
+  min-width: 100%;
+}
 .button {
   cursor:pointer;
 }
