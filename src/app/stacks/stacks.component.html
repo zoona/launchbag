@@ -1,0 +1,81 @@
+<main role="main" class="container">
+    
+    <div class="jumbotron">
+      <h3><b>Stacks</b></h3>
+      <div class="card col-sm-12 mx-auto mt-4">
+          <br/>
+        <h4>Data Scientist</h4>
+        <div class="row mt-4" style="padding-left: 30px; padding-right:30px;">
+          <div class="col-sm-2 mx-auto"><img src="/assets/images/2x/scientist@2x.png" (click)="runDS()" class="button"/></div>
+          <div class="col-sm-10 mx-auto">
+            <ul class="stack-describtion">
+              <li>분석을 위해 필요한 시스템 설정(system library 및 R/python packages 등)이 완료된 환경 제공</li>
+              <li>모든 분석환경이 구셩된 jupyter notebook(python3 + R)을 빠르게 생성하여, 지연없이 분석환경 구성 가능</li>
+              <li>분석가는 해당 URL에 접근하여 분석업무 수행!</li>
+            </ul>
+          </div>
+          <div class="col-sm-12 mt-3">
+            <p class="processing" [hidden]="!message1 || finished1">processing...</p>
+            <div [hidden]="!finished1">
+              <button type="button" class="btn btn-primary btn-sm" (click)="redirectToJupyter()">Jupyter</button>
+            </div>
+            <div class="mt-3" [hidden]="!message1">
+              <textarea #scrollMe1 class="form-control logConsole" rows="6">{{ message1 }}</textarea>
+              <br/>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card col-sm-12 mx-auto mt-4">
+        <br/>
+        <h4>ELK</h4>
+        <div class="row mt-4" style="padding-left: 30px; padding-right:30px;">
+          <div class="col-sm-2 mx-auto"><img src="/assets/images/2x/elk@2x.png" (click)="runELK()" class="button"/></div>
+          <div class="col-sm-10 mx-auto">
+            <ul class="stack-describtion">
+              <li>Realtime Data Processing 환경 제공</li>
+              <li>Elastic Search / LogStash  / Kibana Stack</li>
+              <li>Data Indexing 및 Visualization으로 실시간 데이터 탐지 가능</li>
+            </ul>
+          </div>
+          
+          <div class="col-sm-12 mt-3">
+            <p class="processing" [hidden]="!message2 || finished2">processing...</p>
+            <div [hidden]="!finished2">
+              <button type="button" class="btn btn-primary btn-sm" (click)="redirectToKibana()">Kibana</button>
+            </div>
+            <div class="mt-3" [hidden]="!message2">
+              <textarea #scrollMe2 class="form-control logConsole" rows="6">{{ message2 }}</textarea>          
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="card col-sm-12 mx-auto mt-4">
+        <br/>
+        <h4>Bigdata Analysis</h4>
+        <div class="row mt-4" style="padding-left: 30px; padding-right:30px;">
+          <div class="col-sm-2 mx-auto"><img src="/assets/images/bigdata2.png" width="125" height="125" (click)="runBDA()" class="button" /></div>
+          <div class="col-sm-10 mx-auto">
+            <ul class="stack-describtion">
+              <li>Bigdata  Processing / Analysis 환경 제공</li>
+              <li>Spark + Zeppelin Stack</li>
+              <li>Zeppelin notebook을 활용한 Spark Processing으로 Visualization까지 쉽게 사용가능</li>
+            </ul>
+          </div>
+          <br/>
+          <div class="col-sm-12 mt-3">
+            <p class="processing" [hidden]="!message3 || finished3">processing...</p>
+            <div [hidden]="!finished3">
+              <button type="button" class="btn btn-primary btn-sm" (click)="redirectToZeppelin()">Zeppelin</button>
+            </div>
+            <div class="mt-3" [hidden]="!message3">
+              <textarea #scrollMe3 class="form-control logConsole" rows="6">{{ message3 }}</textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main><!-- /.container -->
+  

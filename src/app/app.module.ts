@@ -9,18 +9,22 @@ import { environment } from './../environments/environment';
 
 import { AppComponent } from './app.component';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
-
+import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http';
-
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StacksComponent } from './stacks/stacks.component';
+import { MonitoringComponent } from './monitoring/monitoring.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppNavbarComponent
+    AppNavbarComponent,
+    StacksComponent,
+    MonitoringComponent
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,

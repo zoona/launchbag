@@ -1,0 +1,33 @@
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+.stack-describtion {
+  font-size: 15px;
+}
+
+.card {
+  background-color:white !important;
+}
+
+.demotext {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: #010507;
+  width: 180px;
+  height: 30px;
+}
+
+.processing {
+  font-style: italic
+}
+
+.logConsole {
+  font-style: italic;
+  font-size: 9px;
+  min-width: 100%;
+}
+.button {
+  cursor:pointer;
+}
