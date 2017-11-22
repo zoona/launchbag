@@ -5,8 +5,7 @@
   <div class="jumbotron card">
     <div class="col-sm-12 mx-auto">
       <h3>Data Scientist</h3>
-      <br/>
-      <div class="row">
+      <div class="row mt-4">
         <div class="col-sm-2 mx-auto"><img src="/assets/images/2x/scientist@2x.png" (click)="runDS()" class="button"/></div>
         <div class="col-sm-10 mx-auto">
           <ul class="stack-describtion">
@@ -17,14 +16,16 @@
         </div>
         <div class="col-sm-10 mt-3">
           <p [hidden]="!message1 || finished1">processing</p>
-          <div [hidden]="!finished1"><a href="{{jupyterUrl}}" target="_blank">Jupyter</a></div>
+          <div [hidden]="!finished1">
+            <button type="button" class="btn btn-secondary" >Jupyter</button>
+          </div>
           <textarea #scrollMe1 [hidden]="!message1" class="form-control" rows="5" style="min-width: 100%;font-size:14px;">{{ message1 }}</textarea>
         </div>
       </div>
       
       <br/>
       <h3>ELK</h3>
-      <div class="row">
+      <div class="row mt-4">
         <div class="col-sm-2 mx-auto"><img src="/assets/images/2x/elk@2x.png" (click)="runELK()" class="button"/></div>
         <div class="col-sm-10 mx-auto">
           <br/>
@@ -33,14 +34,14 @@
         
         <div class="col-sm-10 mt-3">
           <p [hidden]="!message2 || finished2">processing</p>
-          <div [hidden]="!finished2"><a href="{{kibanaUrl}}" target="_blank">Kibana</a></div>
+          <div [hidden]="!finished2"><a href="{{kibanaUrl}}" target="_blank">[Kibana link]</a></div>
           <textarea #scrollMe2 [hidden]="!message2" class="form-control" rows="5" style="min-width: 100%;font-size:14px;">{{ message2 }}</textarea>          
         </div>
       </div>
       
       <br/>
       <h3>Bigdata Analysis</h3>
-      <div class="row">
+      <div class="row mt-4">
         <div class="col-sm-2 mx-auto"><img src="/assets/images/bigdata2.png" width="125" height="125" (click)="runBDA()" class="button" /></div>
         <div class="col-sm-10 mx-auto">
           <br/>
@@ -49,7 +50,7 @@
         <br/>
         <div class="col-sm-10 mt-3">
           <p [hidden]="!message3 || finished3">processing</p>
-          <div [hidden]="!finished3"><a href="{{zeppelinUrl}}" target="_blank">Zeppelin</a></div>
+          <div [hidden]="!finished3"><a href="{{zeppelinUrl}}" target="_blank">[Zeppelin link]</a></div>
           <textarea #scrollMe3 [hidden]="!message3" class="form-control" rows="5" style="min-width: 100%;font-size:14px;">{{ message3 }}</textarea>
           
         </div>
