@@ -28,6 +28,7 @@ router.get('/ds', (req, res) => {
     
     var chunk = '';
     child.stdout.on("data", function(data) {
+        console.log(data.toString());
         chunk += data;
         socket.emit('ds', chunk);
     });
@@ -49,6 +50,7 @@ router.get('/elk', (req, res) => {
     
     var chunk = '';
     child.stdout.on("data", function(data) {
+        console.log(data.toString());
         chunk += data;
         socket.emit('elk', chunk);
     });
@@ -67,9 +69,9 @@ router.get('/bda', (req, res) => {
     var spawn = require('child_process').spawn;
     
     var child = spawn('ansible-playbook', ['-i', 'inventories/hosts', 'launchbag_zeppelin.yml', '-e', '"container_zepl_name=ZeppelinTest zepl_port=8089"'], {cwd: this.workingDir});
-    
     var chunk = '';
     child.stdout.on("data", function(data) {
+        console.log(data.toString());
         chunk += data;
         socket.emit('bda', chunk);
     });
